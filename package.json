@@ -1,0 +1,12 @@
+{
+  "name": "projet4ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 4 Openclassroom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-watch":"sass --watch ./sass/style.scss:./css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
