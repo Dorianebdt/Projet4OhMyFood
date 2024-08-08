@@ -1,6 +1,235 @@
 @charset "UTF-8";
-.Réservation h1 {
-  background-color: red;
+/****Background-color*******/
+/*******text-color****/
+/****Background-button-color******/
+/*******border-color*****/
+.search, .search-container {
+  background-color: #EAEAEA;
+}
+
+.search-container {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
+.button {
+  color: #FFFFFF;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+.button:active {
+  transform: translate(0px, 5px);
+}
+
+.fonctionnement-section {
+  background-color: #FFFFFF;
+}
+
+.nombre-fonctionnement {
+  background-color: #9356DC;
+  color: #FFFFFF;
+}
+
+.fonctionnement-liste {
+  background-color: #F3F3F3;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.fonctionnement-liste .grey {
+  color: #7E7E7E;
+}
+.fonctionnement-liste .purple {
+  color: #9356DC;
+}
+
+.card {
+  background-color: #FFFFFF;
+}
+
+.like-button:hover, .like-button:active {
+  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+footer {
+  background-color: #353535;
+}
+footer .footer-container {
+  color: #FFFFFF;
+}
+footer img {
+  filter: invert(100%);
+}
+
+/******COMMUN*******/
+* {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Roboto";
+}
+
+body {
+  margin: 0;
+}
+
+.homepage {
+  background-color: #F6F6F6;
+}
+
+.card {
+  object-fit: cover;
+}
+
+/********EN-TETE*********/
+.en-tete {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.en-tete img {
+  padding: 14px 89px;
+}
+.en-tete .search {
+  text-align: center;
+  gap: 17px;
+  border: none;
+}
+.en-tete::placeholder {
+  font-weight: 500;
+  font-size: 16px;
+}
+.en-tete .search-container {
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  padding: 15px 0;
+}
+
+/**********SECTION-RESERVATION*************/
+.Réservation {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Réservation .titre {
+  margin-bottom: 0;
+}
+.Réservation .Réservation p {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 300;
+}
+.Réservation .button {
+  padding: 15px;
+  border: transparent;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+/************FONCTIONNEMENT********/
+.fonctionnement-section {
+  padding: 20px;
+}
+.fonctionnement-section .fonctionnement-liste {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  position: relative;
+  border-radius: 20px;
+  height: 72px;
+}
+.fonctionnement-section .nombre-fonctionnement {
+  position: absolute;
+  top: 30%;
+  left: -10px;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  align-content: center;
+}
+.fonctionnement-section .fonctionnement-titre, .fonctionnement-section .fonctionnement-icone {
+  align-content: center;
+  font-size: 16px;
+}
+.fonctionnement-section .fonctionnement-icone {
+  padding-left: 30px;
+  padding-right: 25px;
+  width: 13px;
+}
+
+/*********SECTION-RESTAURANTS************/
+.restaurants {
+  padding: 0 20px;
+  gap: 18px;
+}
+.restaurants .restaurant-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.restaurants .card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  position: relative;
+}
+.restaurants .restaurant-cards img {
+  height: 251px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants .card-txt {
+  line-height: 21px;
+}
+.restaurants .card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.restaurants .card-subtitle {
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 0;
+}
+.restaurants .fa-heart {
+  font-size: 32px;
+}
+.restaurants .like-button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  bottom: 20px;
+  left: 293px;
+}
+
+/*******footer****/
+footer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+footer .footer-container {
+  padding: 22px 25px;
+  gap: 16px;
+}
+footer img {
+  width: 139px;
+  height: 27px;
+}
+footer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 0;
+}
+footer ul .icone {
+  margin-right: 7px;
 }
 
 /*# sourceMappingURL=style.css.map */

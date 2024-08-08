@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="./css/style.css">
     <script src="https://kit.fontawesome.com/c85d8559bb.js" crossorigin="anonymous"></script>
     <title> OhMyFood</title>
@@ -27,76 +28,105 @@
     <section class="Réservation">
         <h1 class="titre">Réservez le menu qui vous convient</h1>
         <p> Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <button class="button"> Explorer nos restaurants</button>
+        <button class="button" href="index.html#restaurants"> Explorer nos restaurants</button>
     </section>
 
     <!----------FONCTIONNEMENT-------->
     <section class="fonctionnement-section">
         <h1 class="titre">Fonctionnement</h1>
-        <div class=fonctionnement-button>
+        <div class=fonctionnement-liste>
             <div class="nombre-fonctionnement"> 1</div>
-            <button class="liste-fonctionnement"> Chosissez un restaurant</button>
+            <div class="fonctionnement-icone"> <i class="fa-solid fa-mobile-screen-button grey logo "></i></div>
+           <div class="fonctionnement-titre">Choisissez un restaurant</div>
         </div>
-        <div class=fonctionnement-button>
+        <div class=fonctionnement-liste>
             <div class="nombre-fonctionnement"> 2</div>
-            <button class="liste-fonctionnement"> Composez votre menu</button>
+            <div class="fonctionnement-icone"><i class="fa-solid fa-list-ul grey logo"></i></div>
+            <div class="fonctionnement-titre">Composez votre menu</div>
         </div>
-        <div class=fonctionnement-button>
+        <div class=fonctionnement-liste>
             <div class="nombre-fonctionnement"> 3</div>
-            <button class="liste-fonctionnement"> Dégustez au restaurant</button>
+            <div class="fonctionnement-icone"> <i class="fa-solid fa-store purple logo"></i></div>
+            <div class="fonctionnement-titre">Dégustez au restaurant</div>
         </div>
     </section>
 
     <section class="restaurants" id="restaurants">
 
-        <h1 class="titre">Restaurants</h1>
-        <div class="restaurant-cards">
+    <h1 class="titre">Restaurants</h1>
+    <div class="restaurant-cards">
             <a href="#">
                 <article class="card">
                     <img src="./assets/assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                         alt="Image d'une assiette">
-                    <div class="card-content">
                         <div class="card-txt">
                             <h3 class="card-title"> La palette du goût</h3>
                             <p class="card-subtitle">Ménilmontant</p>
                         </div>
-                    </div>
+                        <a class="like-button" href="#" title="J'aime">
+                            <i class="fa-regular fa-heart"></i>
+                      
+                </article>
+            </a>
 
             <a href="#">
                  <article class="card">
                      <img src="./assets/assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                          alt="Image d'une assiette">
-                     <div class="card-content">
                         <div class="card-txt">
                               <h3 class="card-title"> La note enchantée</h3>
                               <p class="card-subtitle">Charonne</p>
-                         </div>
-                    </div>
+                        </div>
+                        <div class="like-button"  title="J'aime">
+                            <i class="fa-regular fa-heart"></i>
+                       </div>
+                 </article>
+            </a>
 
             <a href="#">
                  <article class="card">
                     <img src="./assets/assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                          alt="Image d'une assiettes">
-                    <div class="card-content">
+                          alt="Image d'une assiettes">          
                         <div class="card-txt">
                                 <h3 class="card-title"> À la française</h3>
                                  <p class="card-subtitle">Cité Rouge</p>
                           </div>
-                     </div>
+                          <div class="like-button" title="J'aime">
+                            <i class="fa-regular fa-heart"></i>
+                       </div>
+                 </article>
+            </a>
 
             <a href="#">
                 <article class="card">
                     <img src="./assets/assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                            alt="Image d'une assiettes">
-                    <div class="card-content">
                         <div class="card-txt">
                                 <h3 class="card-title"> Le délice des sens</h3>
                                  <p class="card-subtitle">Folie-Méricourt</p>
-                            </div>
-                     </div>
-
-
+                        </div>
+                        <div class="like-button" title="J'aime">
+                            <i class="fa-regular fa-heart"></i>
+                       </div>
+                </article>
+            </a>
+        </div>
     </section>
+
+    <footer>
+        <div class="footer-container">
+                <img class="logo" src="assets/assets/logo/ohmyfood.png" alt="Logo ohmyfood">
+
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-utensils icone"></i>Porposer un restaurant</a></li>
+                    <li><a href="#"> <i class="fa-solid fa-handshake-angle icone"></i>Devenir partenaire</a></li>
+                    <li><a href="#">Mention légales</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            
+        </div>
+        
+    </footer>
 
 
 

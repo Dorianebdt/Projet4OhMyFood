@@ -1,0 +1,72 @@
+
+/****Background-color*******/
+$main-background-color:#FFFFFF;
+$secondary-background-color:#F6F6F6;
+$footer-background-color: #353535;
+$search-bar-background-color:#EAEAEA;
+
+/*******text-color****/
+$white-text-color:#FFFFFF;
+
+/****Background-button-color******/
+$button-color:#9356DC; 
+
+/*******border-color*****/
+$border-color: #99E2D0;
+
+.search, .search-container {
+    background-color: $search-bar-background-color; 
+}
+.search-container{
+box-shadow: 0px 4px 4px 0px #00000040;}
+
+.button {
+color:$white-text-color;
+background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  &:active{
+        transform: translate(0px, 5px);
+    }
+  
+}
+.fonctionnement-section {
+    background-color: $main-background-color;
+}
+
+.nombre-fonctionnement{
+    background-color: $button-color;
+    color:$white-text-color
+}
+
+.fonctionnement-liste{
+    background-color:#F3F3F3;
+    box-shadow: 0px 4px 15px 0px #00000026;
+
+
+ .grey {
+    color:#7E7E7E
+ }
+
+ .purple {
+    color:$button-color;
+ }
+}
+
+.card {
+    background-color: $main-background-color;
+}
+
+.like-button:hover, .like-button:active{
+    color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+
+}
+footer {
+    background-color:#353535;
+
+.footer-container{
+    color:$white-text-color
+}
+
+img{
+  filter: invert(100%);
+}
+}
