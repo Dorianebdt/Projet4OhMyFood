@@ -7,31 +7,48 @@
          .search-container, .ohmyfood{
             box-shadow: none;
          }
-        }
+        
     
     /************Reservation********/
     
     .Réservation{
-    
+      padding-bottom:30px;
+      padding-top:30px;
+
         .titre{
             margin-bottom: 18px;
             font-size: 40px;
             height:47px;
            text-align: center;
-           align-content: center;
+           align-items: center;
+           width:inherit;
+          
         }
-    
+
         p{
             height: 46px;
-            align-content: center;
-            padding-bottom: 18px;
+            padding: 0 0 18px 0;
+            display: flex;
+            align-items: center;
+            text-align:center;
+            margin-right:auto;
+            margin-left:auto;
         }
     
+        .explorer {
+           
+            display: flex;
+            align-items: center;
+            margin:auto;
+           
+
         .button {
-            width: 218px;
-            height: 50px;
-            margin:0 597px 0 597px;
+           padding:15px 18.075px;
+          
+           margin:0;
+
         }
+    }
     }
     
     /***********FONCTIONNEMENT*********/
@@ -99,4 +116,5 @@
     
        
     }
+}
 }

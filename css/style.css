@@ -2,67 +2,82 @@
 /*********Responsive-Homepage*************/
 @media (min-width: 768px) {
   /*************HEADER************/
+  .homepage {
+    /************Reservation********/
+    /***********FONCTIONNEMENT*********/
+    /***********RESTAURANT*************/
+    /***********FOOTER*********/
+  }
   .homepage .search-container, .homepage .ohmyfood {
     box-shadow: none;
   }
-  /************Reservation********/
-  .Réservation .titre {
+  .homepage .Réservation {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  .homepage .Réservation .titre {
     margin-bottom: 18px;
     font-size: 40px;
     height: 47px;
     text-align: center;
-    align-content: center;
+    align-items: center;
+    width: inherit;
   }
-  .Réservation p {
+  .homepage .Réservation p {
     height: 46px;
-    align-content: center;
-    padding-bottom: 18px;
+    padding: 0 0 18px 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
   }
-  .Réservation .button {
-    width: 218px;
-    height: 50px;
-    margin: 0 597px 0 597px;
+  .homepage .Réservation .explorer {
+    display: flex;
+    align-items: center;
+    margin: auto;
   }
-  /***********FONCTIONNEMENT*********/
-  .fonctionnement-section {
+  .homepage .Réservation .explorer .button {
+    padding: 15px 18.075px;
+    margin: 0;
+  }
+  .homepage .fonctionnement-section {
     padding: 50px 180px 50px 180px;
   }
-  .fonctionnement-section .fonctionnement {
+  .homepage .fonctionnement-section .fonctionnement {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 0;
   }
-  /***********RESTAURANT*************/
-  .restaurants {
+  .homepage .restaurants {
     margin: 0 180px;
     padding: 0 0 30px 0;
     box-sizing: border-box;
   }
-  .restaurants .titre {
+  .homepage .restaurants .titre {
     padding-top: 30px;
     margin-top: 0;
   }
-  .restaurants .restaurant-cards {
+  .homepage .restaurants .restaurant-cards {
     display: grid;
     grid-template: repeat(2, 1fr)/repeat(2, 1fr);
     grid-row-gap: 50px;
     grid-column-gap: 100px;
   }
-  .restaurants .card {
+  .homepage .restaurants .card {
     flex: 1;
   }
-  /***********FOOTER*********/
-  footer {
+  .homepage footer {
     padding: 30px 25px;
     position: relative;
   }
-  footer .footer-container img {
+  .homepage footer .footer-container img {
     position: absolute;
     right: 51px;
     bottom: 32px;
     width: 110px;
   }
-  footer .footer-container .liste-footer {
+  .homepage footer .footer-container .liste-footer {
     display: grid;
     grid-template-columns: 190px 190px 130px 130px;
     position: absolute;
@@ -145,7 +160,7 @@
 }
 .Réservation p {
   font-size: 18px;
-  line-height: 21px;
+  line-height: 21.09px;
   font-weight: 300;
   padding-bottom: 27px;
   padding: 0 26px 27px 34px;
@@ -361,6 +376,5 @@ footer img {
 }
 
 /*********Restaurants-Menu*******/
-/**lapalettedugout***/
 
 /*# sourceMappingURL=style.css.map */
