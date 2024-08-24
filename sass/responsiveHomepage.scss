@@ -1,0 +1,102 @@
+@media (min-width:768px) {
+
+/*************HEADER************/
+
+.en-tete{
+    
+     .search-container, .ohmyfood{
+        box-shadow: none;
+     }
+    }
+
+/************Reservation********/
+
+.Réservation{
+
+    .titre{
+        margin-bottom: 18px;
+        font-size: 40px;
+        height:47px;
+       text-align: center;
+       align-content: center;
+    }
+
+    p{
+        height: 46px;
+        align-content: center;
+        padding-bottom: 18px;
+    }
+
+    .button {
+        width: 218px;
+        height: 50px;
+        margin:0 597px 0 597px;
+    }
+}
+
+/***********FONCTIONNEMENT*********/
+
+.fonctionnement-section{
+    padding:50px 180px 50px 180px;
+
+    .fonctionnement {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     margin-bottom:0;
+  
+    }
+}
+
+/***********RESTAURANT*************/
+
+.restaurants{
+    margin:0 180px;
+    padding:0 0 30px 0;
+    box-sizing:border-box;
+
+    .titre {
+        padding-top:30px;
+        margin-top:0;
+    }
+    .restaurant-cards{
+display:grid;
+grid-template:repeat(2,1fr)/ repeat(2, 1fr);
+grid-row-gap:50px;
+grid-column-gap:100px;
+}
+
+.card {
+    flex:1;
+}
+
+}
+
+/***********FOOTER*********/
+
+footer{
+    padding: 30px 25px;
+    position:relative;
+.footer-container{
+   
+   img{
+        position:absolute;
+        right:51px; 
+        bottom:32px;
+        width: 110px;
+    }
+   
+    .liste-footer{
+     display:grid;
+     grid-template-columns: 190px 190px 130px 130px;
+    position:absolute;
+        right:180px;
+        bottom:30px;
+        margin:0;
+       
+       
+    }
+}
+
+   
+}
+}
