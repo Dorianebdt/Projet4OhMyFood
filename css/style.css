@@ -1,17 +1,366 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 4 | @import "responsiveHomepage";
- *   |         ^^^^^^^^^^^^^^^^^^^^
- *   '
- *   sass/main.scss 4:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 4 \2502  @import \"responsiveHomepage\";\a   \2502          ^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass/main.scss 4:9  root stylesheet";
+@charset "UTF-8";
+/*********Responsive-Homepage*************/
+@media (min-width: 768px) {
+  /*************HEADER************/
+  .homepage .search-container, .homepage .ohmyfood {
+    box-shadow: none;
+  }
+  /************Reservation********/
+  .Réservation .titre {
+    margin-bottom: 18px;
+    font-size: 40px;
+    height: 47px;
+    text-align: center;
+    align-content: center;
+  }
+  .Réservation p {
+    height: 46px;
+    align-content: center;
+    padding-bottom: 18px;
+  }
+  .Réservation .button {
+    width: 218px;
+    height: 50px;
+    margin: 0 597px 0 597px;
+  }
+  /***********FONCTIONNEMENT*********/
+  .fonctionnement-section {
+    padding: 50px 180px 50px 180px;
+  }
+  .fonctionnement-section .fonctionnement {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 0;
+  }
+  /***********RESTAURANT*************/
+  .restaurants {
+    margin: 0 180px;
+    padding: 0 0 30px 0;
+    box-sizing: border-box;
+  }
+  .restaurants .titre {
+    padding-top: 30px;
+    margin-top: 0;
+  }
+  .restaurants .restaurant-cards {
+    display: grid;
+    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+    grid-row-gap: 50px;
+    grid-column-gap: 100px;
+  }
+  .restaurants .card {
+    flex: 1;
+  }
+  /***********FOOTER*********/
+  footer {
+    padding: 30px 25px;
+    position: relative;
+  }
+  footer .footer-container img {
+    position: absolute;
+    right: 51px;
+    bottom: 32px;
+    width: 110px;
+  }
+  footer .footer-container .liste-footer {
+    display: grid;
+    grid-template-columns: 190px 190px 130px 130px;
+    position: absolute;
+    right: 180px;
+    bottom: 30px;
+    margin: 0;
+  }
 }
+/*********Homepage***************/
+/******COMMUN*******/
+* {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Roboto";
+}
+* :focus {
+  outline: none;
+}
+* body {
+  margin: 0;
+}
+* .card img {
+  object-fit: cover;
+}
+
+/********EN-TETE*********/
+.homepage .en-tete {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.homepage .en-tete .ohmyfood {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  position: relative;
+  text-align: center;
+}
+.homepage .en-tete img {
+  width: 162px;
+  height: 44px;
+  padding: 14px 0 5px 0;
+}
+.homepage .en-tete .search {
+  text-align: center;
+  border: none;
+  padding: 0;
+}
+.homepage .en-tete .search::placeholder {
+  text-align: center;
+  line-height: 18.075px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #353535;
+}
+.homepage .en-tete .search-container {
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  padding: 15.5px 118.5px;
+}
+.homepage .en-tete .search-container .location {
+  height: 16px;
+}
+
+/**********SECTION-RESERVATION*************/
+.Réservation {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 39px;
+  padding-bottom: 57px;
+}
+.Réservation .titre {
+  display: flex;
+  align-self: center;
+  margin: 0 58px 0 42px;
+  font-size: 24px;
+  width: 275px;
+  height: 68px;
+  line-height: 28px;
+}
+.Réservation p {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 300;
+  padding-bottom: 27px;
+  padding: 0 26px 27px 34px;
+  margin: 0;
+}
+.Réservation .button {
+  padding: 13px 18.075px;
+  border: transparent;
+  border-radius: 25px;
+  font-size: 16px;
+  margin: 0 75px 0 82px;
+}
+
+/************FONCTIONNEMENT********/
+.fonctionnement-section {
+  padding: 48px 20px 68px 20px;
+}
+.fonctionnement-section .titre {
+  margin: 0 0 26px 0;
+}
+.fonctionnement-section .fonctionnement-liste {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  border-radius: 20px;
+  height: 72px;
+}
+.fonctionnement-section .fonctionnement {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.fonctionnement-section .nombre-fonctionnement {
+  position: absolute;
+  top: 30%;
+  left: -10px;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  align-content: center;
+}
+.fonctionnement-section .fonctionnement-titre, .fonctionnement-section .fonctionnement-icone {
+  align-content: center;
+  font-size: 16px;
+}
+.fonctionnement-section .fonctionnement-icone {
+  padding-left: 33px;
+  padding-right: 27px;
+  width: 13px;
+}
+
+/*********SECTION-RESTAURANTS************/
+.restaurants {
+  padding: 0 18px 66px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.restaurants .titre {
+  padding-top: 54px;
+  margin-top: 0;
+}
+.restaurants .restaurant-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.restaurants .card {
+  display: flex;
+  flex-direction: column;
+  height: 251px;
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  position: relative;
+}
+.restaurants .restaurant-cards img {
+  height: 174px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants .nouveau {
+  font-weight: 500;
+  line-height: 16.41px;
+  border: transparent;
+  border-radius: 2px;
+  color: #008766;
+  background-color: #99E2D0;
+  padding: 9px 7px;
+  width: 80px;
+  text-align: center;
+  position: absolute;
+  right: 15px;
+  top: 13px;
+}
+.restaurants .card-txt {
+  padding-left: 13px;
+  line-height: 21px;
+}
+.restaurants .card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.restaurants .card-subtitle {
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.restaurants .fa-heart {
+  font-size: 22px;
+}
+.restaurants button {
+  border: none;
+  background-color: inherit;
+}
+.restaurants .like-button {
+  cursor: pointer;
+  position: absolute;
+  bottom: 33px;
+  right: 25px;
+}
+
+/*******FOOTER****/
+footer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 25px;
+  gap: 16px;
+}
+footer img {
+  width: 139px;
+}
+footer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 0;
+}
+footer ul .icone {
+  margin-right: 7px;
+}
+
+/*********Color-Générale*********/
+/****Background-color*******/
+/*******text-color****/
+/****Background-button-color******/
+/*******border-color*****/
+.homepage {
+  background-color: #F6F6F6;
+}
+
+.search, .search-container {
+  background-color: #EAEAEA;
+}
+
+.search-container {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
+.button {
+  color: #FFFFFF;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+.button:active {
+  transform: translate(0px, 5px);
+}
+
+.fonctionnement-section {
+  background-color: #FFFFFF;
+}
+
+.nombre-fonctionnement {
+  background-color: #9356DC;
+  color: #FFFFFF;
+}
+
+.fonctionnement-liste {
+  background-color: #F3F3F3;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.fonctionnement-liste .grey {
+  color: #7E7E7E;
+}
+.fonctionnement-liste .purple {
+  color: #9356DC;
+}
+
+.card {
+  background-color: #FFFFFF;
+}
+
+.like-button:hover, .like-button:active {
+  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+footer {
+  background-color: #353535;
+}
+footer .footer-container {
+  color: #FFFFFF;
+}
+footer img {
+  filter: invert(100%);
+}
+
+/*********Restaurants-Menu*******/
+/**lapalettedugout***/
+
+/*# sourceMappingURL=style.css.map */

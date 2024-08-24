@@ -16,8 +16,8 @@ body {
 }
 }
 /********EN-TETE*********/
-.homepage{
-  .en-tete {
+
+  .homepage .en-tete {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -275,5 +275,5 @@ ul {
     }
 }
 
-}
+
 }
