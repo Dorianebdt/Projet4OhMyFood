@@ -1,6 +1,6 @@
 
 
-/*********Responsive-Homepage*************/
+/*********Responsive*************/
 @import "responsive";
 
 /*********Homepage***************/
@@ -10,7 +10,38 @@
 @import "color";
 
 /*********Restaurants-Menu*******/
+@import "menus";
 
+/**********KEYFRAMES*********/
 
+/******loader*******/
+@keyframes fondu {
+    0% { opacity: 1; }
+    100% { opacity: 0;
+    visibility: hidden; }
+  }
+ 
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
+/******ANIMATION-AFFICHACHE-PLATS*********/
 
+@keyframes slide {
+  from {
+    margin-left:100%;
+    width:100%;
+    opacity:0
+  }
+
+  to{
+    margin-left:0%;
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+  
+  

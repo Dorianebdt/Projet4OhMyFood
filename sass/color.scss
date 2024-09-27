@@ -15,7 +15,7 @@ $button-color:#9356DC;
 $border-color: #99E2D0;
 
 
-
+/**********HOMEPAGE***********/
 .homepage {
     background-color: #F6F6F6;
 }
@@ -76,4 +76,16 @@ footer {
 img{
   filter: invert(100%);
 }
+}
+
+/************MENUS**********/
+
+.commander {
+    color:$white-text-color;
+
+background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+
+  &:active{
+        transform: translate(0px, 5px);
+    }
 }

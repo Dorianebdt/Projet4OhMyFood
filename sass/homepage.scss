@@ -1,3 +1,30 @@
+.loader {
+    position:fixed;
+    display: grid;
+    place-items: center;
+    background-color: #ffffff;
+    height: 100%;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    visibility: visible;
+    animation: fondu 5s; 
+    transform-origin: top;
+    animation-fill-mode: forwards;
+  }
+  .loader::after {
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #9356dc;
+    border-radius: 50%;
+    animation: spin 1s;
+    animation-iteration-count: 3;
+   
+  }
+ 
+ 
 /******COMMUN*******/
 
 * {
@@ -93,7 +120,7 @@ padding: 14px 0 5px 0;
 
 p {
     font-size: 18px;
-    line-height: 21.09px;
+    line-height: 21.009px;
     font-weight: 300;
     padding-bottom:27px;
     padding:0 26px 27px 34px; 
@@ -214,6 +241,7 @@ p {
    .card-txt{
     padding-left:13px;
     line-height:21px;
+    position:relative;
    }
     .card-title {
         font-size:18px;
@@ -228,20 +256,39 @@ p {
     }
 
    .fa-heart {
- font-size:22px;
+ font-size:30px;
 
-}
-button {
-    border:none;
-    background-color: inherit;
 }
 
 .like-button{
-    cursor: pointer;
-    position:absolute;
-    bottom:33px; right:25px; 
+    cursor: inherit;
+  
 }
 
+.coeur-vide{
+     position:absolute; 
+    right:25px; top:23px;
+
+}
+
+.coeur-plein {
+    position:absolute; 
+    right:25px; top:23px;
+    height: 30px;
+    width: 30px; 
+   opacity: 0;
+    color:transparent;
+    transition:opacity 0.5s ease;
+    background: linear-gradient(to bottom,#9356DC,#FF79DA);
+    background-clip: text;
+    
+   
+    &:hover{
+        opacity:1;
+    }
+
+   
+}
 }
 /*******FOOTER****/ 
 
@@ -255,11 +302,12 @@ footer{
     .footer-container{
         display:flex;
         flex-direction: column;
-        padding: 22px 25px;
-        gap: 16px;
+       
     }
     
 img{
+    padding-top:22px;
+    padding-left:25px;
     width:139px;
   
 }
@@ -269,6 +317,7 @@ ul {
     flex-direction: column;
     gap:7px;
     padding:0;
+    padding-left:25px;
 
     .icone {
         margin-right:7px;

@@ -1,6 +1,7 @@
 @charset "UTF-8";
-/*********Responsive-Homepage*************/
-@media (min-width: 768px) {
+/*********Responsive*************/
+@media (min-width: 1020px) {
+  /*****RESPONSIVE-HOMEPAGE************/
   /*************HEADER************/
   .homepage {
     /************Reservation********/
@@ -8,7 +9,8 @@
     /***********RESTAURANT*************/
     /***********FOOTER*********/
   }
-  .homepage .search-container, .homepage .ohmyfood {
+  .homepage .search-container,
+  .homepage .ohmyfood {
     box-shadow: none;
   }
   .homepage .Réservation {
@@ -86,7 +88,78 @@
     margin: 0;
   }
 }
+@media (min-width: 1020px) and (min-width: 1020px) {
+  /*********RESPONSIVE-MENU**********/
+  .img {
+    height: 956.14px;
+  }
+  .menu {
+    margin-left: 193px;
+    margin-right: 192px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  .menu .liste {
+    width: 634px;
+  }
+  .menu .titre {
+    padding-top: 19px;
+  }
+  .menu .banniere {
+    position: relative;
+  }
+  .menu .like-button {
+    position: absolute;
+    left: 400px;
+    top: -12px;
+  }
+  footer {
+    position: relative;
+    width: 100%;
+    padding: 30px 25px;
+  }
+  footer .footer-container img {
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
+  }
+  footer .footer-container .liste-footer {
+    margin-right: 180px;
+    margin-bottom: 0;
+    justify-content: end;
+    display: grid;
+    grid-template-columns: 190px 190px 130px 130px;
+  }
+}
 /*********Homepage***************/
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  height: 100%;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  visibility: visible;
+  animation: fondu 5s;
+  transform-origin: top;
+  animation-fill-mode: forwards;
+}
+
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #9356dc;
+  border-radius: 50%;
+  animation: spin 1s;
+  animation-iteration-count: 3;
+}
+
 /******COMMUN*******/
 * {
   text-decoration: none;
@@ -160,7 +233,7 @@
 }
 .Réservation p {
   font-size: 18px;
-  line-height: 21.09px;
+  line-height: 21.009px;
   font-weight: 300;
   padding-bottom: 27px;
   padding: 0 26px 27px 34px;
@@ -260,6 +333,7 @@
 .restaurants .card-txt {
   padding-left: 13px;
   line-height: 21px;
+  position: relative;
 }
 .restaurants .card-title {
   font-size: 18px;
@@ -273,17 +347,30 @@
   margin-bottom: 12px;
 }
 .restaurants .fa-heart {
-  font-size: 22px;
-}
-.restaurants button {
-  border: none;
-  background-color: inherit;
+  font-size: 30px;
 }
 .restaurants .like-button {
-  cursor: pointer;
+  cursor: inherit;
+}
+.restaurants .coeur-vide {
   position: absolute;
-  bottom: 33px;
   right: 25px;
+  top: 23px;
+}
+.restaurants .coeur-plein {
+  position: absolute;
+  right: 25px;
+  top: 23px;
+  height: 30px;
+  width: 30px;
+  opacity: 0;
+  color: transparent;
+  transition: opacity 0.5s ease;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+}
+.restaurants .coeur-plein:hover {
+  opacity: 1;
 }
 
 /*******FOOTER****/
@@ -295,10 +382,10 @@ footer {
 footer .footer-container {
   display: flex;
   flex-direction: column;
-  padding: 22px 25px;
-  gap: 16px;
 }
 footer img {
+  padding-top: 22px;
+  padding-left: 25px;
   width: 139px;
 }
 footer ul {
@@ -307,6 +394,7 @@ footer ul {
   flex-direction: column;
   gap: 7px;
   padding: 0;
+  padding-left: 25px;
 }
 footer ul .icone {
   margin-right: 7px;
@@ -317,6 +405,7 @@ footer ul .icone {
 /*******text-color****/
 /****Background-button-color******/
 /*******border-color*****/
+/**********HOMEPAGE***********/
 .homepage {
   background-color: #F6F6F6;
 }
@@ -375,6 +464,328 @@ footer img {
   filter: invert(100%);
 }
 
+/************MENUS**********/
+.commander {
+  color: #FFFFFF;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+.commander:active {
+  transform: translate(0px, 5px);
+}
+
 /*********Restaurants-Menu*******/
+.menuLaPaletteDG,
+.menuALaFR,
+.menuLaNoteE,
+.menuLeDeliceDS {
+  /*********HEARDER*********/
+  /**********SECTION-TITRE*********/
+  /***********SECTION-LISTES-MENUS*********/
+}
+.menuLaPaletteDG .assiette,
+.menuALaFR .assiette,
+.menuLaNoteE .assiette,
+.menuLeDeliceDS .assiette {
+  object-fit: cover;
+}
+.menuLaPaletteDG .ohmyfood,
+.menuALaFR .ohmyfood,
+.menuLaNoteE .ohmyfood,
+.menuLeDeliceDS .ohmyfood {
+  display: flex;
+  flex-direction: row;
+  height: 63px;
+  position: relative;
+}
+.menuLaPaletteDG .ohmyfood .logo,
+.menuALaFR .ohmyfood .logo,
+.menuLaNoteE .ohmyfood .logo,
+.menuLeDeliceDS .ohmyfood .logo {
+  width: 162px;
+  height: 30px;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  align-self: center;
+}
+.menuLaPaletteDG .ohmyfood .retour,
+.menuALaFR .ohmyfood .retour,
+.menuLaNoteE .ohmyfood .retour,
+.menuLeDeliceDS .ohmyfood .retour {
+  font-size: 17.2px;
+  position: absolute;
+  left: 23px;
+  top: 24px;
+}
+.menuLaPaletteDG .assiette,
+.menuALaFR .assiette,
+.menuLaNoteE .assiette,
+.menuLeDeliceDS .assiette {
+  width: 100%;
+  height: 275px;
+  position: relative;
+}
+.menuLaPaletteDG header,
+.menuALaFR header,
+.menuLaNoteE header,
+.menuLeDeliceDS header {
+  background-color: #FFFFFF;
+  height: 383px;
+}
+.menuLaPaletteDG .menu,
+.menuALaFR .menu,
+.menuLaNoteE .menu,
+.menuLeDeliceDS .menu {
+  background-color: #F6F6F6;
+  margin-top: -90px;
+  z-index: 10;
+  position: relative;
+  border-radius: 30px;
+  padding-top: 32px;
+}
+.menuLaPaletteDG .menu .titre,
+.menuALaFR .menu .titre,
+.menuLaNoteE .menu .titre,
+.menuLeDeliceDS .menu .titre {
+  font-size: 28px;
+  font-weight: 400;
+  font-style: italic;
+  font-family: shrikhand;
+  margin-left: 17px;
+  margin-bottom: 40px;
+}
+.menuLaPaletteDG .menu .fa-heart,
+.menuALaFR .menu .fa-heart,
+.menuLaNoteE .menu .fa-heart,
+.menuLeDeliceDS .menu .fa-heart {
+  font-size: 30px;
+}
+.menuLaPaletteDG .menu .like-button,
+.menuALaFR .menu .like-button,
+.menuLaNoteE .menu .like-button,
+.menuLeDeliceDS .menu .like-button {
+  cursor: inherit;
+}
+.menuLaPaletteDG .menu .coeur-vide,
+.menuALaFR .menu .coeur-vide,
+.menuLaNoteE .menu .coeur-vide,
+.menuLeDeliceDS .menu .coeur-vide {
+  position: absolute;
+  right: 40px;
+  top: 37px;
+}
+.menuLaPaletteDG .menu .coeur-plein,
+.menuALaFR .menu .coeur-plein,
+.menuLaNoteE .menu .coeur-plein,
+.menuLeDeliceDS .menu .coeur-plein {
+  position: absolute;
+  right: 40px;
+  top: 37px;
+  height: 30px;
+  width: 30px;
+  opacity: 0;
+  color: transparent;
+  transition: opacity 0.5s ease;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+}
+.menuLaPaletteDG .menu .coeur-plein:hover,
+.menuALaFR .menu .coeur-plein:hover,
+.menuLaNoteE .menu .coeur-plein:hover,
+.menuLeDeliceDS .menu .coeur-plein:hover {
+  opacity: 1;
+}
+.menuLaPaletteDG .repas,
+.menuALaFR .repas,
+.menuLaNoteE .repas,
+.menuLeDeliceDS .repas {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18.75px;
+  width: 40px;
+  height: 27px;
+  border-bottom: 3px solid #99E2D0;
+}
+.menuLaPaletteDG .liste,
+.menuALaFR .liste,
+.menuLaNoteE .liste,
+.menuLeDeliceDS .liste {
+  margin: 0 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menuLaPaletteDG .card-repas,
+.menuALaFR .card-repas,
+.menuLaNoteE .card-repas,
+.menuLeDeliceDS .card-repas {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  border-radius: 15.04px;
+  height: 69px;
+  position: relative;
+  overflow: hidden;
+}
+.menuLaPaletteDG .card-repas:hover a,
+.menuALaFR .card-repas:hover a,
+.menuLaNoteE .card-repas:hover a,
+.menuLeDeliceDS .card-repas:hover a {
+  width: 59px;
+  opacity: 1;
+  align-self: flex-end;
+  transition: all s ease-in-out;
+}
+.menuLaPaletteDG .card-repas:hover .card-txt,
+.menuALaFR .card-repas:hover .card-txt,
+.menuLaNoteE .card-repas:hover .card-txt,
+.menuLeDeliceDS .card-repas:hover .card-txt {
+  width: 30%;
+}
+.menuLaPaletteDG .card-repas .card-txt,
+.menuALaFR .card-repas .card-txt,
+.menuLaNoteE .card-repas .card-txt,
+.menuLeDeliceDS .card-repas .card-txt {
+  display: flex;
+  flex-direction: column;
+  padding: 13.5px 0 13.5px 15px;
+  gap: 5px;
+  height: 42px;
+  flex: 1;
+}
+.menuLaPaletteDG .card-repas p,
+.menuALaFR .card-repas p,
+.menuLaNoteE .card-repas p,
+.menuLeDeliceDS .card-repas p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menuLaPaletteDG .card-repas .plat,
+.menuALaFR .card-repas .plat,
+.menuLaNoteE .card-repas .plat,
+.menuLeDeliceDS .card-repas .plat {
+  font-size: 18px;
+  font-weight: 500;
+}
+.menuLaPaletteDG .card-repas .description,
+.menuALaFR .card-repas .description,
+.menuLaNoteE .card-repas .description,
+.menuLeDeliceDS .card-repas .description {
+  font-size: 15.04px;
+  font-weight: 300;
+}
+.menuLaPaletteDG .card-repas .prix,
+.menuALaFR .card-repas .prix,
+.menuLaNoteE .card-repas .prix,
+.menuLeDeliceDS .card-repas .prix {
+  display: flex;
+  align-items: center;
+  font-size: 15.04px;
+  font-weight: 700;
+  margin-right: 13.5px;
+  margin-left: 15px;
+}
+.menuLaPaletteDG .card-repas a,
+.menuALaFR .card-repas a,
+.menuLaNoteE .card-repas a,
+.menuLeDeliceDS .card-repas a {
+  position: relative;
+  background-color: #99E2D0;
+  height: 69px;
+  width: 0;
+  border-radius: 0px 15px 15px 0px;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+.menuLaPaletteDG .fa-check,
+.menuALaFR .fa-check,
+.menuLaNoteE .fa-check,
+.menuLeDeliceDS .fa-check {
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  color: #99E2D0;
+  padding: 1px;
+  border-radius: 50px;
+}
+
+.commander {
+  padding: 16px 48px 15px 49px;
+  text-align: center;
+  margin: 28px auto 40px auto;
+  border: transparent;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+}
+
+/******ANIMATION-AFFICHACHE-PLATS*********/
+.un {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation-duration: 3s;
+  animation-name: slide;
+  animation-fill-mode: forwards;
+}
+
+.deux {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  animation-delay: 4s;
+  animation-duration: 3s;
+  animation-name: slide;
+  animation-fill-mode: forwards;
+}
+
+.trois {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  animation-delay: 7s;
+  animation-duration: 3s;
+  animation-name: slide;
+  animation-fill-mode: forwards;
+}
+
+/**********KEYFRAMES*********/
+/******loader*******/
+@keyframes fondu {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/******ANIMATION-AFFICHACHE-PLATS*********/
+@keyframes slide {
+  from {
+    margin-left: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+    opacity: 1;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

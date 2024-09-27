@@ -1,0 +1,66 @@
+/****Background-color*******/
+/*******text-color****/
+/****Background-button-color******/
+/*******border-color*****/
+.search,
+.search-container {
+  background-color: #EAEAEA;
+}
+
+.search-container {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
+.button {
+  color: #FFFFFF;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+.button:active {
+  transform: translate(0px, 5px);
+}
+
+.fonctionnement-section {
+  background-color: #FFFFFF;
+}
+
+.nombre-fonctionnement {
+  background-color: #9356DC;
+  color: #FFFFFF;
+}
+
+.fonctionnement-liste {
+  background-color: #F3F3F3;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+}
+
+.fonctionnement-liste .grey {
+  color: #7E7E7E;
+}
+
+.fonctionnement-liste .purple {
+  color: #9356DC;
+}
+
+.card {
+  background-color: #FFFFFF;
+}
+
+.like-button:hover,
+.like-button:active {
+  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+footer {
+  background-color: #353535;
+}
+
+footer .footer-container {
+  color: #FFFFFF;
+}
+
+footer img {
+  filter: invert(100%);
+}
+
+/*# sourceMappingURL=color.css.map */

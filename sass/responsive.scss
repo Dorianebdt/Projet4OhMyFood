@@ -1,120 +1,197 @@
-@media (min-width:768px) {
+@media (min-width:1020px)
+/****responsive desktop******/
+    {
+    /*****RESPONSIVE-HOMEPAGE************/
 
     /*************HEADER************/
-    
-    .homepage{
-        
-         .search-container, .ohmyfood{
+
+    .homepage {
+
+        .search-container,
+        .ohmyfood {
             box-shadow: none;
-         }
-        
-    
-    /************Reservation********/
-    
-    .Réservation{
-      padding-bottom:30px;
-      padding-top:30px;
-
-        .titre{
-            margin-bottom: 18px;
-            font-size: 40px;
-            height:47px;
-           text-align: center;
-           align-items: center;
-           width:inherit;
-          
         }
 
-        p{
-            height: 46px;
-            padding: 0 0 18px 0;
+
+        /************Reservation********/
+
+        .Réservation {
+            padding-bottom: 30px;
+            padding-top: 30px;
+
+            .titre {
+                margin-bottom: 18px;
+                font-size: 40px;
+                height: 47px;
+                text-align: center;
+                align-items: center;
+                width: inherit;
+
+            }
+
+            p {
+                height: 46px;
+                padding: 0 0 18px 0;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .explorer {
+
+                display: flex;
+                align-items: center;
+                margin: auto;
+
+
+                .button {
+                    padding: 15px 18.075px;
+
+                    margin: 0;
+
+                }
+            }
+        }
+
+        /***********FONCTIONNEMENT*********/
+
+        .fonctionnement-section {
+            padding: 50px 180px 50px 180px;
+
+            .fonctionnement {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin-bottom: 0;
+
+            }
+        }
+
+        /***********RESTAURANT*************/
+
+        .restaurants {
+            margin: 0 180px;
+            padding: 0 0 30px 0;
+            box-sizing: border-box;
+
+            .titre {
+                padding-top: 30px;
+                margin-top: 0;
+            }
+
+            .restaurant-cards {
+                display: grid;
+                grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
+                grid-row-gap: 50px;
+                grid-column-gap: 100px;
+            }
+
+            .card {
+                flex: 1;
+            }
+
+        }
+
+        /***********FOOTER*********/
+
+        footer {
+            padding: 30px 25px;
+            position: relative;
+
+            .footer-container {
+
+                img {
+                    position: absolute;
+                    right: 51px;
+                    bottom: 32px;
+                    width: 110px;
+                }
+
+                .liste-footer {
+                    display: grid;
+                    grid-template-columns: 190px 190px 130px 130px;
+                    position: absolute;
+                    right: 180px;
+                    bottom: 30px;
+                    margin: 0;
+
+
+                }
+            }
+
+
+        }
+    }
+
+    @media (min-width:1020px) {
+        /*********RESPONSIVE-MENU**********/
+
+
+        .img {
+            height: 956.14px;
+        }
+
+        .menu {
+            margin-left: 193px;
+            margin-right: 192px;
             display: flex;
+            flex-direction: column;
+            gap: 40px;
             align-items: center;
-            text-align:center;
-            margin-right:auto;
-            margin-left:auto;
-        }
-    
-        .explorer {
-           
-            display: flex;
-            align-items: center;
-            margin:auto;
-           
 
-        .button {
-           padding:15px 18.075px;
-          
-           margin:0;
+
+            .liste {
+                width: 634px;
+
+            }
+
+            .titre {
+                padding-top: 19px;
+
+            }
+
+
+            .banniere {
+                position: relative;
+            }
+
+            .like-button {
+                position: absolute;
+                left: 400px;
+                top: -12px;
+            }
 
         }
-    }
-    }
-    
-    /***********FONCTIONNEMENT*********/
-    
-    .fonctionnement-section{
-        padding:50px 180px 50px 180px;
-    
-        .fonctionnement {
-         display: grid;
-         grid-template-columns: 1fr 1fr 1fr;
-         margin-bottom:0;
-      
+
+        footer {
+            position: relative;
+            width: 100%;
+            padding: 30px 25px;
+
+
+
+            .footer-container {
+
+
+                img {
+                    position: absolute;
+                    right: 25px;
+                    bottom: 30px;
+                }
+
+                .liste-footer {
+                    margin-right: 180px;
+                    margin-bottom: 0;
+
+                    justify-content: end;
+                    display: grid;
+                    grid-template-columns: 190px 190px 130px 130px;
+
+                }
+
+            }
         }
+
     }
-    
-    /***********RESTAURANT*************/
-    
-    .restaurants{
-        margin:0 180px;
-        padding:0 0 30px 0;
-        box-sizing:border-box;
-    
-        .titre {
-            padding-top:30px;
-            margin-top:0;
-        }
-        .restaurant-cards{
-    display:grid;
-    grid-template:repeat(2,1fr)/ repeat(2, 1fr);
-    grid-row-gap:50px;
-    grid-column-gap:100px;
-    }
-    
-    .card {
-        flex:1;
-    }
-    
-    }
-    
-    /***********FOOTER*********/
-    
-    footer{
-        padding: 30px 25px;
-        position:relative;
-    .footer-container{
-       
-       img{
-            position:absolute;
-            right:51px; 
-            bottom:32px;
-            width: 110px;
-        }
-       
-        .liste-footer{
-         display:grid;
-         grid-template-columns: 190px 190px 130px 130px;
-        position:absolute;
-            right:180px;
-            bottom:30px;
-            margin:0;
-           
-           
-        }
-    }
-    
-       
-    }
-}
 }
