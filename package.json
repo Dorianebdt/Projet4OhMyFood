@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass-watch": "sass --watch ./sass/main.scss:./css/style.css"
   },
+  
   "author": "",
   "license": "ISC"
 }
